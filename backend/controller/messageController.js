@@ -4,7 +4,7 @@ export const sendMessage=async(req,res,next)=>{
     if(!firstName|| !lastName || !email ||!phone||!message){
         return res.status(400).json({
             success:false,
-            message:"Please fill full form",
+            message:"anurag fill full form",
         })
     }
     await Message.create({firstName,lastName,email,phone,message});
