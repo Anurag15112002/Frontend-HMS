@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import './MessageForm.css';
 
 const MessageForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -36,6 +37,7 @@ const MessageForm = () => {
 
   return (
     <>
+      
       <div className="container form-component message-form">
         <h2>Send Us A Message</h2>
         <form onSubmit={handleMessage}>
@@ -77,7 +79,6 @@ const MessageForm = () => {
             <button type="submit">Send</button>
           </div>
         </form>
-        <img src="/Vector.png" alt="vector" />
       </div>
     </>
   );

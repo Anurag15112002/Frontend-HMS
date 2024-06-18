@@ -45,9 +45,10 @@ const Login = () => {
   return (
     <>
       <section className="container form-component">
-        <img src="/logo.png" alt="logo" className="logo" />
-        <h1 className="form-title">WELCOME TO ZEECARE</h1>
+        <img src="logo.png" alt="logo" className="logo" />
+        <h1 className="form-title">WELCOME TO AAA CARE</h1>
         <p>Only Admins Are Allowed To Access These Resources!</p>
+        <div className="container">
         <form onSubmit={handleLogin}>
           <input
             type="text"
@@ -71,6 +72,7 @@ const Login = () => {
             <button type="submit">Login</button>
           </div>
         </form>
+        </div>
       </section>
     </>
   );

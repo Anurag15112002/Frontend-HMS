@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
-import { Context } from "../main";
+import { Context } from "../../main";
+
 import { Link, useNavigate, Navigate } from "react-router-dom";
 
 const Login = () => {
@@ -45,12 +46,8 @@ const Login = () => {
   return (
     <>
       <div className="container form-component login-form">
-        <h2>Sign In</h2>
-        <p>Please Login To Continue</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
-        </p>
+        <h2>Sign Up</h2>
+        <p>sign up as a new user</p>
         <form onSubmit={handleLogin}>
           <input
             type="text"

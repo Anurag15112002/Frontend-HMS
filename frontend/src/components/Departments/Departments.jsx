@@ -1,44 +1,45 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import './Departments.css';
 
 const Departments = () => {
   const departmentsArray = [
     {
       name: "Pediatrics",
-      imageUrl: "/departments/pedia.jpg",
+      imageUrl: "padiatrics.png",
     },
     {
       name: "Orthopedics",
-      imageUrl: "/departments/ortho.jpg",
+      imageUrl: "ortho.png",
     },
     {
       name: "Cardiology",
-      imageUrl: "/departments/cardio.jpg",
+      imageUrl: "cardio.png",
     },
     {
       name: "Neurology",
-      imageUrl: "/departments/neuro.jpg",
+      imageUrl: "neuro.png",
     },
     {
       name: "Oncology",
-      imageUrl: "/departments/onco.jpg",
+      imageUrl: "oncology.png",
     },
     {
       name: "Radiology",
-      imageUrl: "/departments/radio.jpg",
+      imageUrl: "radiology.png",
     },
     {
       name: "Physical Therapy",
-      imageUrl: "/departments/therapy.jpg",
+      imageUrl: "physical.png",
     },
     {
       name: "Dermatology",
-      imageUrl: "/departments/derma.jpg",
+      imageUrl: "derma.png",
     },
     {
       name: "ENT",
-      imageUrl: "/departments/ent.jpg",
+      imageUrl: "ent.png",
     },
   ];
 
@@ -67,7 +68,7 @@ const Departments = () => {
 
   return (
     <>
-      <div className="container departments">
+      <div className="departments">
         <h2>Departments</h2>
         <Carousel
           responsive={responsive}

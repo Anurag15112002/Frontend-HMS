@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLocationArrow, FaPhone } from "react-icons/fa6";
+import { FaLocationArrow, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import './Footer.css';
 
 const Footer = () => {
   const hours = [
@@ -27,7 +28,7 @@ const Footer = () => {
     },
     {
       id: 5,
-      day: "Monday",
+      day: "Friday",
       time: "3:00 PM - 9:00 PM",
     },
     {
@@ -39,22 +40,22 @@ const Footer = () => {
 
   return (
     <>
-      <footer className={"container"}>
+      <footer className="footerContainer">
         <hr />
-        <div className="content">
-          <div>
-            <img src="/logo.png" alt="logo" className="logo-img"/>
+        <div className="footerContent">
+          <div className="footerLogo">
+            <img src="/logo.png" alt="logo" className="footerLogoImg"/>
           </div>
-          <div>
+          <div className="footerLinks">
             <h4>Quick Links</h4>
             <ul>
-              <Link to={"/"}>Home</Link>
-              <Link to={"/appointment"}>Appointment</Link>
-              <Link to={"/about"}>About</Link>
+              <li><Link to={"/"}>Home</Link></li>
+              <li><Link to={"/appointment"}>Appointment</Link></li>
+              <li><Link to={"/about"}>About</Link></li>
             </ul>
           </div>
-          <div>
-            <h4>Hours</h4>
+          <div className="footerHours">
+            <h4>Day</h4>
             <ul>
               {hours.map((element) => (
                 <li key={element.id}>
@@ -64,19 +65,19 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="footerContact">
             <h4>Contact</h4>
-            <div>
-              <FaPhone />
+            <div className="contactItem">
+              <FaPhone color="white" />
               <span>999-999-9999</span>
             </div>
-            <div>
-              <MdEmail />
-              <span>zeelab@gmail.com</span>
+            <div className="contactItem">
+              <MdEmail color="white" />
+              <span>AAAlab@gmail.com</span>
             </div>
-            <div>
-              <FaLocationArrow />
-              <span>Karachi, Pakistan</span>
+            <div className="contactItem">
+              <FaLocationArrow color="white" />
+              <span>Noida, India</span>
             </div>
           </div>
         </div>

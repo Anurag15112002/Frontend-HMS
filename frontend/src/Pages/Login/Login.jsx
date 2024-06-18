@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
-import { Context } from "../main";
+import { Context } from "../../main";
+import "./Login.css";
+
+
 import { Link, useNavigate, Navigate } from "react-router-dom";
 
 const Login = () => {
@@ -44,13 +47,9 @@ const Login = () => {
 
   return (
     <>
-      <div className="container form-component login-form">
+      <div className="container">
         <h2>Sign In</h2>
         <p>Please Login To Continue</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
-        </p>
         <form onSubmit={handleLogin}>
           <input
             type="text"
@@ -70,22 +69,13 @@ const Login = () => {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <div
-            style={{
-              gap: "10px",
-              justifyContent: "flex-end",
-              flexDirection: "row",
-            }}
-          >
-            <p style={{ marginBottom: 0 }}>Not Registered?</p>
-            <Link
-              to={"/register"}
-              style={{ textDecoration: "none", color: "#271776ca" }}
-            >
+          <div>
+            <p >Not Registered?</p>
+            <Link to={"/register"}style={{ marginLeft: '20px' }} >
               Register Now
             </Link>
           </div>
-          <div style={{ justifyContent: "center", alignItems: "center" }}>
+          <div className="button">
             <button type="submit">Login</button>
           </div>
         </form>
