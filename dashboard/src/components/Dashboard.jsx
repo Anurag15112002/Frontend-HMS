@@ -5,9 +5,12 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { GoCheckCircleFill } from "react-icons/go";
 import { AiFillCloseCircle } from "react-icons/ai";
+import Lab from './Lab'
 
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
+  const [totalAppointments, setTotalAppointments] = useState(0);
+  const [totalDoctors, setTotalDoctors] = useState(0);
 
   useEffect(() => {
     const fetchAppointments = async () => {
@@ -17,11 +20,27 @@ const Dashboard = () => {
           { withCredentials: true }
         );
         setAppointments(data.appointments);
+        setTotalAppointments(data.appointments.length);
       } catch (error) {
         setAppointments([]);
+        setTotalAppointments(0);
       }
     };
+
+    const fetchDoctors = async () => {
+      try {
+        const { data } = await axios.get(
+          "http://localhost:4000/api/v1/user/doctors",
+          { withCredentials: true }
+        );
+        setTotalDoctors(data.doctors.length);
+      } catch (error) {
+        setTotalDoctors(0);
+      }
+    };
+
     fetchAppointments();
+    fetchDoctors();
   }, []);
 
   const handleUpdateStatus = async (appointmentId, status) => {
@@ -59,8 +78,7 @@ const Dashboard = () => {
               <div>
                 <p>Hello ,</p>
                 <h5>
-                  {admin &&
-                    `${admin.firstName} ${admin.lastName}`}{" "}
+                  {admin && `${admin.firstName} ${admin.lastName}`}
                 </h5>
               </div>
               <p>
@@ -72,11 +90,11 @@ const Dashboard = () => {
           </div>
           <div className="secondBox">
             <p>Total Appointments</p>
-            <h3>1500</h3>
+            <h3>{totalAppointments}</h3>
           </div>
           <div className="thirdBox">
             <p>Registered Doctors</p>
-            <h3>10</h3>
+            <h3>{totalDoctors}</h3>
           </div>
         </div>
         <div className="banner">
@@ -125,16 +143,21 @@ const Dashboard = () => {
                           </option>
                         </select>
                       </td>
-                      <td>{appointment.hasVisited === true ? <GoCheckCircleFill className="green"/> : <AiFillCloseCircle className="red"/>}</td>
+                      <td>
+                        {appointment.hasVisited === true ? (
+                          <GoCheckCircleFill className="green" />
+                        ) : (
+                          <AiFillCloseCircle className="red" />
+                        )}
+                      </td>
                     </tr>
                   ))
                 : "No Appointments Found!"}
             </tbody>
           </table>
-
-          {}
         </div>
       </section>
+      <Lab></Lab>
     </>
   );
 };

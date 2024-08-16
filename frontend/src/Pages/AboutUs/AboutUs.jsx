@@ -4,6 +4,7 @@ import Biography from "../../components/Biography/Biography";
 const AboutUs = () => {
   return (
     <>
+    <Biography/>
     </>
   );
 };

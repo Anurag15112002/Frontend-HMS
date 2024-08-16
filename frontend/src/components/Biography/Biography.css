@@ -1,0 +1,99 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0; /* Remove padding to avoid overflow issues */
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+  }
+  
+  .section {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+    color: black; /* Adjust text color if needed */
+    margin: 0; /* Remove margins to avoid overflow issues */
+    width: 100%;
+    height: 50vh; /* Set height to full viewport height */
+    max-width: 100%; /* Ensure it takes the full width */
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .section.left-image {
+    background-color: #cfe4e0; /* Color for even-indexed sections */
+  }
+  
+  .section.right-image {
+    background-color: #a3c7de; /* Color for odd-indexed sections */
+    flex-direction: row-reverse; /* Reverse the order of image and text */
+  }
+  
+  .section img {
+    margin-right: 20px; /* Margin for spacing */
+    width: 300px; /* Adjust image size as needed */
+  }
+  
+  .section.right-image img {
+    width: 400px;
+    height: 250px;
+    margin-left: 20px; /* Adjust margin for right-aligned image */
+    margin-right: 0; /* Remove right margin for right-aligned image */
+  }
+  .section.left-image img {
+    width: 400px;
+    height: 250px;
+    margin-left: 20px; /* Adjust margin for right-aligned image */
+    margin-right: 0; /* Remove right margin for right-aligned image */
+  }
+  
+  .section .content {
+    flex: 1; /* Allow content to take remaining space */
+    box-sizing: border-box; /* Ensure padding and margins are included in the total width */
+  }
+  
+  .section-image {
+    max-width: 600px;
+    height: auto;
+    width: 150px; /* Adjust image size as needed */
+    margin: 20px;
+    margin-left: 5px;
+    margin-right: 20px; /* Adjust margin to prevent overflow */
+  }
+  
+  .section-content {
+    flex: 1;
+    box-sizing: border-box; /* Ensure padding and margins are included in the total width */
+  }
+  
+  .section-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+  }
+  
+  .section-content p {
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* Optional: Ensure responsiveness on smaller screens */
+  @media (max-width: 600px) {
+    .section {
+      flex-direction: column;
+      text-align: center;
+      height: auto; /* Adjust height for smaller screens */
+      padding: 20px;
+    }
+  
+    .section.left-image, .section.right-image {
+      flex-direction: column;
+    }
+  
+    .section img {
+      margin: 0 0 20px 0;
+      max-width: 100%;
+    }
+  }
+  

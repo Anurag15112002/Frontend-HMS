@@ -31,7 +31,9 @@ const Navbar = () => {
   return (
     <nav className="navbarContainer">
       <div className="navbarLogo">
+      <a href="/">
         <img src="logo.png" alt="logo" className="navbarLogoImg" />
+      </a>
       </div>
       <div className={menuOpen ? "navbarLinks navbarShowMenu" : "navbarLinks"}>
         <div className="navbarLinksItems">

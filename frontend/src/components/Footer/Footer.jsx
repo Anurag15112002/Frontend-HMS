@@ -1,41 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLocationArrow, FaPhone } from "react-icons/fa";
+import { FaLocationArrow, FaPhone, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import './Footer.css';
 
 const Footer = () => {
   const hours = [
-    {
-      id: 1,
-      day: "Monday",
-      time: "9:00 AM - 11:00 PM",
-    },
-    {
-      id: 2,
-      day: "Tuesday",
-      time: "12:00 PM - 12:00 AM",
-    },
-    {
-      id: 3,
-      day: "Wednesday",
-      time: "10:00 AM - 10:00 PM",
-    },
-    {
-      id: 4,
-      day: "Thursday",
-      time: "9:00 AM - 9:00 PM",
-    },
-    {
-      id: 5,
-      day: "Friday",
-      time: "3:00 PM - 9:00 PM",
-    },
-    {
-      id: 6,
-      day: "Saturday",
-      time: "9:00 AM - 3:00 PM",
-    },
+    { id: 1, day: "Monday", time: "9:00 AM - 11:00 PM" },
+    { id: 2, day: "Tuesday", time: "12:00 PM - 12:00 AM" },
+    { id: 3, day: "Wednesday", time: "10:00 AM - 10:00 PM" },
+    { id: 4, day: "Thursday", time: "9:00 AM - 9:00 PM" },
+    { id: 5, day: "Friday", time: "3:00 PM - 9:00 PM" },
+    { id: 6, day: "Saturday", time: "9:00 AM - 3:00 PM" },
   ];
 
   return (
@@ -80,6 +56,23 @@ const Footer = () => {
               <span>Noida, India</span>
             </div>
           </div>
+          <div className="footerSocial">
+            <h4>Follow Us</h4>
+            <div className="socialLinks">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={30} color="white" />
+              </a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={30} color="white" />
+              </a>
+              <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp size={30} color="white" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="footerBottom">
+          <p>© 2024 Your Company. All rights reserved.</p>
         </div>
       </footer>
     </>

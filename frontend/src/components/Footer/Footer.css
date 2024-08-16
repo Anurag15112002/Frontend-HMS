@@ -34,7 +34,7 @@
 .footerContact {
   flex: 1;
   min-width: 200px;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .footerLinks h4,
@@ -79,7 +79,16 @@
 .footerContact .contactItem span {
   margin-left: 0.5rem;
 }
-
+.footerSocial h4{
+  
+  margin-top: 200px;
+  margin-left:10px;
+  margin-right: 50px;
+}
+.footerSocial .socialLinks a {
+  margin: 0 10px; /* Add gap between the links */
+  color: white;
+}
 @media (max-width: 768px) {
   .footerContent {
     flex-direction: column;
