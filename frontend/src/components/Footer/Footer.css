@@ -1,5 +1,4 @@
-/* Footer.css */
-
+/* Footer Container */
 .footerContainer {
   background-color: #141339;
   color: #fff;
@@ -10,6 +9,7 @@
   margin-bottom: 2rem;
 }
 
+/* Footer Content */
 .footerContent {
   display: flex;
   flex-wrap: wrap;
@@ -17,18 +17,21 @@
   gap: 2rem;
 }
 
+/* Footer Logo */
 .footerLogo {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem; /* Adjust margin for better spacing */
 }
 
 .footerLogoImg {
   width: 90px;
   height: 90px;
   border-radius: 90px;
-  margin-bottom: 150px;
 }
 
+/* Footer Sections */
 .footerLinks,
 .footerHours,
 .footerContact {
@@ -45,6 +48,7 @@
   color: #ff6b6b;
 }
 
+/* Footer Lists */
 .footerLinks ul,
 .footerHours ul {
   list-style-type: none;
@@ -70,6 +74,7 @@
   justify-content: space-between;
 }
 
+/* Footer Contact */
 .footerContact .contactItem {
   display: flex;
   align-items: center;
@@ -79,16 +84,24 @@
 .footerContact .contactItem span {
   margin-left: 0.5rem;
 }
-.footerSocial h4{
-  
-  margin-top: 200px;
-  margin-left:10px;
-  margin-right: 50px;
+
+/* Footer Social */
+.footerSocial h4 {
+  margin-top: 2rem;
+  text-align: center; /* Center align on all devices */
 }
+
+.footerSocial .socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .footerSocial .socialLinks a {
-  margin: 0 10px; /* Add gap between the links */
   color: white;
 }
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .footerContent {
     flex-direction: column;
@@ -96,7 +109,44 @@
     text-align: center;
   }
 
+  .footerLogo {
+    margin-bottom: 1rem;
+  }
+
+  .footerLinks,
+  .footerHours,
+  .footerContact {
+    margin-left: 0;
+    margin-bottom: 2rem; /* Add space between sections */
+  }
+
   .footerContact .contactItem {
     justify-content: center;
+  }
+
+  .footerSocial h4 {
+    margin-top: 1rem;
+  }
+
+  .footerSocial .socialLinks {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerLogoImg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .footerLinks h4,
+  .footerHours h4,
+  .footerContact h4 {
+    font-size: 1rem; /* Smaller headers for mobile */
+  }
+
+  .footerLinks ul li,
+  .footerHours ul li {
+    margin-bottom: 0.3rem;
   }
 }

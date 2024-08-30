@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footerBottom">
-          <p>© 2024 Your Company. All rights reserved.</p>
+          <p>@ 2024 AAA Healthcare. All rights reserved.</p>
         </div>
       </footer>
     </>

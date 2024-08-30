@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { GoCheckCircleFill } from "react-icons/go";
 import { AiFillCloseCircle } from "react-icons/ai";
-import Lab from './Lab'
+
 
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
@@ -73,7 +73,7 @@ const Dashboard = () => {
       <section className="dashboard page">
         <div className="banner">
           <div className="firstBox">
-            <img src="/doc.png" alt="docImg" />
+            <img src="/donimg.png" alt="docImg"/>
             <div className="content">
               <div>
                 <p>Hello ,</p>
@@ -157,7 +157,6 @@ const Dashboard = () => {
           </table>
         </div>
       </section>
-      <Lab></Lab>
     </>
   );
 };

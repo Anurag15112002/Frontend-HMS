@@ -7,25 +7,48 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #1818dbf2;
+  background: #8686f5f2;
   
 }
+/* Default Styles for Container */
 .container {
-max-width: 1700px;
-margin: auto;
-width: 750px;
-padding: 0px;
-border: 1px solid #b5b0b0;
-border-radius: 5px;
-margin-bottom: 10px;
-margin-top: 10px;
-background: linear-gradient(135deg, #f9f9f9, #c2e9fb, #f9f9f9);
+  max-width: 1700px;
+  margin: auto;
+  width: 90%; /* Use percentage width for better responsiveness */
+  padding: 0;
+  border: 1px solid #b5b0b0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #f9f9f9, #c2e9fb, #f9f9f9);
 }
-@media (max-width: 700px) {
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
   .container {
-    padding: 0 20px;
+    width: 95%; /* Slightly larger width for medium screens */
   }
 }
+
+@media (max-width: 992px) {
+  .container {
+    width: 100%; /* Full width on smaller screens */
+    padding: 0 10px; /* Add some padding for better spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px; /* Increase padding for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 20px; /* Add more padding for extra small screens */
+  }
+}
+
 .page {
   margin-left: 120px;
   background: #cac7c7;
@@ -197,6 +220,7 @@ background: linear-gradient(135deg, #f9f9f9, #c2e9fb, #f9f9f9);
 .dashboard .banner:first-child .firstBox img {
   height: 100%;
   flex: 1;
+  border-radius: 250px;
 }
 .dashboard .banner:first-child .firstBox .content {
   flex: 2;
@@ -519,7 +543,7 @@ background: linear-gradient(135deg, #f9f9f9, #c2e9fb, #f9f9f9);
   border-radius: 100px;
 }
 .add-doctor-form {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
