@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://healthcare-administration-system.vercel.app/api/v1/user/login",
+        "http://localhost:4000/api/v1/user/login",
         { email, password, confirmPassword, role: "Admin" },
         {
           withCredentials: true,
