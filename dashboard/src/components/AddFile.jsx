@@ -15,7 +15,7 @@ const AdminDashboard = () => {
     const formData = new FormData();
     formData.append('labReport', file);
 
-    axios.post('http://localhost:4000/upload', formData)
+    axios.post('https://healthcare-administration-system.vercel.app/upload', formData)
       .then(response => {
         alert('File uploaded successfully');
       })
