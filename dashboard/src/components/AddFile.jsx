@@ -15,7 +15,7 @@ const AdminDashboard = () => {
     const formData = new FormData();
     formData.append('labReport', file);
 
-    axios.post('http://localhost:4000/upload', formData)
+    axios.post('https://backend-hms-i6wu.onrender.com/upload', formData)
       .then(response => {
         alert('File uploaded successfully');
       })
