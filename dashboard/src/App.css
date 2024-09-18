@@ -242,12 +242,12 @@ body {
   font-size: 16px;
 }
 .dashboard .banner:first-child .secondBox {
-  background: #3939d9f2;
+  background: #227d6ef2;
   color: #fff;
 }
 .dashboard .banner:first-child .thirdBox {
   color: #ff008d;
-  background: #fff;
+  background: #8dd8d2;
 }
 .dashboard .banner:first-child .secondBox,
 .dashboard .banner:first-child .thirdBox {
@@ -633,4 +633,48 @@ input[type="time"]:before {
 }
 .doctor-sample{
   height: 2px;
+}
+.app-container{
+  
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+    background-color: #c6e7e5; /* Light red background for an error-like appearance */
+    color: #050639; /* Dark red text color */
+    text-align: center; /* Center align text */
+    margin-left: 120px;
+    border-radius: 60px 0px 0px 60px;
+}
+.app-container h1{
+  background-color: hsl(180, 58%, 71%);
+}
+.box1{
+  background-image: linear-gradient(to right, rgba(124, 202, 167, 0), rgb(150, 111, 111));
+  height: 250px;
+  width: 90%;
+  border-radius: 20px;
+}
+.box1 img{
+  height: 60%;
+  margin: 0px;
+  display: flex;
+  margin-left: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.box2{
+  background-image: linear-gradient(to right, rgba(99, 176, 159, 0), rgb(116, 96, 96));
+  height: 250px;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.box3{
+  background-image: linear-gradient(to right, rgba(99, 176, 159, 0), rgb(116, 96, 96));
+  height: 250px;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 30px;
 }

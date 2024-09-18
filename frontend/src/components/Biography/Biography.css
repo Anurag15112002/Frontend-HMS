@@ -19,6 +19,8 @@
     max-width: 100%; /* Ensure it takes the full width */
     box-sizing: border-box; /* Ensure padding is included in the total width */
     overflow: hidden; /* Prevent overflow */
+    border-radius: 30px;
+    margin: 10px;
   }
   
   .section.left-image {

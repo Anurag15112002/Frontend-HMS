@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserDoctor } from "react-icons/fa6";
 import { MdAddModerator } from "react-icons/md";
 import { IoPersonAddSharp } from "react-icons/io5";
+import { FaServicestack } from "react-icons/fa6";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Context } from "../main";
@@ -18,7 +19,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://backend-hms-i6wu.onrender.com/api/v1/user/admin/logout", {
+      .get("http://localhost:4000/api/v1/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {
@@ -52,6 +53,10 @@ const Sidebar = () => {
     navigateTo("/admin/addnew");
     setShow(!show);
   };
+  const gotoServicesPage = () => {
+    navigateTo("/services");
+    setShow(!show);
+  };
 
   return (
     <>
@@ -66,6 +71,7 @@ const Sidebar = () => {
           <IoPersonAddSharp onClick={gotoAddNewDoctor} />
           <AiFillMessage onClick={gotoMessagesPage} />
           <RiLogoutBoxFill onClick={handleLogout} />
+          <FaServicestack onClick={gotoServicesPage} />
         </div>
       </nav>
       <div

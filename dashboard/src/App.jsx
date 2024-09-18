@@ -12,6 +12,8 @@ import "react-toastify/dist/ReactToastify.css";
 import Sidebar from "./components/Sidebar";
 import AddNewAdmin from "./components/AddNewAdmin";
 import "./App.css";
+import Services from "./components/Services";
+
 
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, admin, setAdmin } = useContext(Context);
@@ -20,7 +22,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://backend-hms-i6wu.onrender.com/api/v1/user/admin/me",
+          "http://localhost:4000/api/v1/user/admin/me",
           {
             withCredentials: true,
           }
@@ -45,6 +47,7 @@ const App = () => {
         <Route path="/admin/addnew" element={isAuthenticated ? <AddNewAdmin /> : <Navigate to="/login" />} />
         <Route path="/messages" element={isAuthenticated ? <Messages /> : <Navigate to="/login" />} />
         <Route path="/doctors" element={isAuthenticated ? <Doctors /> : <Navigate to="/login" />} />
+        <Route path="/services" element={isAuthenticated ? <Services/> : <Navigate to="/login"/>}></Route>
       </Routes>
       <ToastContainer position="top-center" />
     </Router>
