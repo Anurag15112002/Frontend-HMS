@@ -1,0 +1,70 @@
+.dashboard-container {
+    max-width: 800px; 
+    height: 300px;      /* Limit the container width */
+    margin: 0 auto;         /* Center the container */
+    padding: 20px;          /* Add some padding */
+    background-color: #eaeaea;  /* Light background color */
+    border-radius: 8px;     /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);  /* Subtle shadow for depth */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-container h1 {
+    font-size: 24px;        /* Heading font size */
+    color: #333;            /* Dark color for heading */
+    margin-bottom: 20px;    /* Spacing below the heading */
+  }
+  
+  .dashboard-container ul {
+    list-style: none;       /* Remove default list styling */
+    padding: 0;             /* Remove default padding */
+    margin: 0;              /* Remove default margin */
+  }
+  
+  .dashboard-container li {
+    margin-bottom: 15px;    /* Space between list items */
+    padding: 10px;          /* Padding inside each list item */
+    border: 1px solid #ddd; /* Border for each item */
+    border-radius: 5px;     /* Rounded corners for each item */
+    display: flex;          /* Align content horizontally */
+    justify-content: space-between; /* Spread content */
+    align-items: center;    /* Vertically center items */
+    background-color: #fff; /* White background */
+    transition: box-shadow 0.3s ease;  /* Smooth hover effect */
+  }
+  
+  .dashboard-container li:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Slight shadow on hover */
+  }
+  
+  .dashboard-container a {
+    color: #007bff;         /* Link color */
+    text-decoration: none;  /* Remove underline */
+    font-size: 16px;        /* Increase font size for links */
+  }
+  
+  .dashboard-container a:hover {
+    text-decoration: underline; /* Underline links on hover */
+  }
+  
+  .dashboard-container button {
+    background-color: #28a745;  /* Green button */
+    color: white;               /* White text */
+    border: none;               /* Remove border */
+    padding: 8px 12px;          /* Button padding */
+    border-radius: 4px;         /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor */
+    font-size: 14px;            /* Font size for button text */
+  }
+  
+  .dashboard-container button:hover {
+    background-color: #218838;  /* Darker green on hover */
+  }
+  
+  .dashboard-container p {
+    font-size: 14px;            /* Font size for error and messages */
+    color: #dc3545;             /* Red color for error messages */
+    margin-top: 20px;           /* Add spacing at the top */
+  }
+  

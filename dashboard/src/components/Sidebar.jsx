@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserDoctor } from "react-icons/fa6";
 import { MdAddModerator } from "react-icons/md";
 import { IoPersonAddSharp } from "react-icons/io5";
-import { FaServicestack } from "react-icons/fa6";
+import { FaServicestack ,FaMoneyBill} from "react-icons/fa6";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Context } from "../main";
@@ -57,6 +57,10 @@ const Sidebar = () => {
     navigateTo("/services");
     setShow(!show);
   };
+  const gotoManagePayments = () => { 
+    navigateTo("/manage-payments");
+    setShow(!show);
+  };
 
   return (
     <>
@@ -72,6 +76,7 @@ const Sidebar = () => {
           <AiFillMessage onClick={gotoMessagesPage} />
           <RiLogoutBoxFill onClick={handleLogout} />
           <FaServicestack onClick={gotoServicesPage} />
+          <FaMoneyBill onClick={gotoManagePayments} />
         </div>
       </nav>
       <div

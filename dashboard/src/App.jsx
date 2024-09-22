@@ -13,6 +13,7 @@ import Sidebar from "./components/Sidebar";
 import AddNewAdmin from "./components/AddNewAdmin";
 import "./App.css";
 import Services from "./components/Services";
+import PaymentManagement  from "./components/Payment"
 
 
 const App = () => {
@@ -47,7 +48,8 @@ const App = () => {
         <Route path="/admin/addnew" element={isAuthenticated ? <AddNewAdmin /> : <Navigate to="/login" />} />
         <Route path="/messages" element={isAuthenticated ? <Messages /> : <Navigate to="/login" />} />
         <Route path="/doctors" element={isAuthenticated ? <Doctors /> : <Navigate to="/login" />} />
-        <Route path="/services" element={isAuthenticated ? <Services/> : <Navigate to="/login"/>}></Route>
+        <Route path="/services" element={isAuthenticated ? <Services/> : <Navigate to="/login"/>} />
+        <Route path="/manage-payments" element={isAuthenticated ? <PaymentManagement /> : <Navigate to="/login" />} />
       </Routes>
       <ToastContainer position="top-center" />
     </Router>

@@ -37,14 +37,17 @@ const Navbar = () => {
       </div>
       <div className={menuOpen ? "navbarLinks navbarShowMenu" : "navbarLinks"}>
         <div className="navbarLinksItems">
-          <Link to="/" onClick={() => setMenuOpen(!menuOpen)} style={{ marginLeft: '50px' ,fontSize:'25px'}}>
+          <Link to="/" onClick={() => setMenuOpen(!menuOpen)} style={{ marginLeft: '20px' ,fontSize:'25px'}}>
             Home
           </Link>
           <Link to="/appointment" onClick={() => setMenuOpen(!menuOpen)} style={{ marginLeft: '20px',fontSize:'25px' }}>
             Appointment
           </Link>
-          <Link to="/about" onClick={() => setMenuOpen(!menuOpen)} style={{ marginLeft: '20px',fontSize:'25px',marginRight:'250px' }}>
+          <Link to="/about" onClick={() => setMenuOpen(!menuOpen)} style={{ marginLeft: '20px',fontSize:'25px' }}>
             About Us
+          </Link>
+          <Link to="/services" onClick={() => setMenuOpen(!menuOpen)} style={{ marginLeft: '20px' ,fontSize:'25px',marginRight:'150px'}}>
+            Services
           </Link>
         </div>
         {isAuthenticated ? (

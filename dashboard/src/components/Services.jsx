@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios'; // You can use axios or fetch for HTTP requests
 
 
+
 const Services = () => {
   const [file, setFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
@@ -22,7 +23,7 @@ const Services = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('/api/upload', formData, {
+      const response = await axios.post('http://localhost:4000/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -48,12 +49,6 @@ const Services = () => {
         <button type='submit'>Upload PDF</button>
       </form>
       <p>{uploadStatus}</p>
-      </div>
-      <div className='box2'>
-        <h1>service 2</h1>
-      </div>
-      <div className='box3'>
-        <h1>service 3</h1>
       </div>
     </div>
   );
