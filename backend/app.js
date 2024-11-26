@@ -32,6 +32,7 @@ app.use(
     credentials: true, // Corrected option name
   })
 );
+app.options('*', cors());
 
 app.use(cookieParser());
 app.use(express.json());
