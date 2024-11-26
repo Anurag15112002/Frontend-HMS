@@ -20,7 +20,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://backend-hms-06er.onrender.com/api/v1/user/patient/me",
+          "https://backend-hms-ikyt.onrender.com/api/v1/user/patient/me",
           {
             withCredentials: true,
           }

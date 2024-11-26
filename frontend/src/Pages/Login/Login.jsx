@@ -21,7 +21,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "https://backend-hms-06er.onrender.com/api/v1/user/login",
+          "https://backend-hms-ikyt.onrender.com/api/v1/user/login",
           { email, password, confirmPassword, role: "Patient" },
           {
             withCredentials: true,

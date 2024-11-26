@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://backend-hms-06er.onrender.com/api/v1/user/admin/logout", {
+      .get("https://backend-hms-ikyt.onrender.com/api/v1/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {

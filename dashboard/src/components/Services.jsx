@@ -23,7 +23,7 @@ const Services = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('https://backend-hms-06er.onrender.com/api/upload', formData, {
+      const response = await axios.post('https://backend-hms-ikyt.onrender.com/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
