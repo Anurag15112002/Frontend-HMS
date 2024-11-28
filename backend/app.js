@@ -28,11 +28,10 @@ app.use((req, res, next) => {
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL, process.env.DASHBOARD_URL],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // Corrected option name
+    method: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
   })
 );
-app.options('*', cors());
 
 app.use(cookieParser());
 app.use(express.json());

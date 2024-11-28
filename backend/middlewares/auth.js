@@ -12,6 +12,7 @@ export const isAdminAuthenticated = catchAsyncErrors(
         new ErrorHandler("Admin is not authenticated!", 400)
       );
     }
+    try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
     req.user = await User.findById(decoded.id);
     if (req.user.role !== "Admin") {
@@ -20,6 +21,10 @@ export const isAdminAuthenticated = catchAsyncErrors(
       );
     }
     next();
+   } catch (error) {
+    // Handle JWT verification errors (e.g., expired or malformed token)
+    return next(new ErrorHandler("Invalid or expired token!", 400));
+  }
   }
 );
 

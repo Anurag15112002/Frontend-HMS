@@ -23,7 +23,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://backend-hms-ikyt.onrender.com/api/v1/user/admin/me",
+          "http://localhost:4000/api/v1/user/admin/me",
           {
             withCredentials: true,
           }
